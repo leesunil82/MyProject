@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "WebFetch(domain:leejeongmin.vercel.app)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

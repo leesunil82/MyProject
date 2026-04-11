@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Colors */
+:root {
+  --dark-main: #222831;
+  --dark-bg: #101010;
+  --card: #393E46;
+  --cyan: #00ADB5;
+  --orange: #C84B31;
+  --lime: #00FF94;
+  --blue: #001AFF;
+  --text: #EEEEEE;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes progressBar {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.progress-bar {
+  animation: progressBar 4s ease-in-out infinite;
+  background: linear-gradient(90deg, #00ADB5, #C84B31, #00FF94, #00ADB5);
+  background-size: 200% 200%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222831;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ADB5, #C84B31);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00FF94, #00ADB5);
+}
+
+/* Selection */
+::selection {
+  background-color: #00ADB5;
+  color: #101010;
+}
+
+/* Scroll Progress Bar */
+#scrollBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00ADB5, #C84B31, #00FF94);
+  width: 0%;
+  z-index: 100;
+  transition: width 0.2s ease;
+}
+
+/* Reveal Animations */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal.active {
+  animation: revealUp 0.8s ease-out forwards;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.reveal-left.active {
+  animation: revealLeft 0.8s ease-out forwards;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.reveal-right.active {
+  animation: revealRight 0.8s ease-out forwards;
+}
+
+/* Card Hover Effects */
+.skill-card,
+.project-card,
+.career-card {
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.career-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 173, 181, 0.4);
+}
+
+/* Utilities */
+.bg-dark-main {
+  background-color: #222831;
+}
+
+.text-light {
+  color: #EEEEEE;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
