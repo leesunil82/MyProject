@@ -1,0 +1,16 @@
+GitHub Vercel 연동 설정 페이지
+================================
+
+아래 URL에서 GitHub와 Vercel 연동 설정을 관리할 수 있습니다.
+
+GitHub 설정 페이지:
+https://github.com/settings/connections/applications/0120e057bd645470c1ed
+
+이 페이지에서:
+- Vercel의 GitHub 접근 권한을 확인하고 관리
+- 필요시 권한을 취소하거나 수정
+- 레포지토리 접근 권한 설정
+
+참고:
+- 로그인한 상태에서만 접근 가능
+- GitHub 계정 설정에서 "Authorized OAuth Apps" 항목에서도 확인 가능
