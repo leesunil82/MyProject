@@ -12,59 +12,62 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
-  <body class="font-montserrat bg-dark-main text-light">
+  <body class="font-montserrat bg-dark-main text-light" style="background-color: var(--dark-main); color: var(--text);">
     <!-- Scroll Progress Bar -->
     <div id="scrollBar"></div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 border-b border-card" style="background-color: #101010;">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 border-b border-card" style="background-color: var(--dark-bg); border-color: var(--card);">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#page1" class="text-2xl font-black" style="color: #00ADB5;">이선일</a>
+        <a href="#page1" class="text-2xl font-black" style="color: var(--cyan);">이선일</a>
 
         <div class="hidden md:flex items-center space-x-4">
-          <a href="#page1" class="px-4 py-2 rounded transition" style="color: #EEEEEE;">Home</a>
-          <a href="#page2" class="px-4 py-2 rounded transition" style="color: #EEEEEE;">Skills</a>
-          <a href="#page3" class="px-4 py-2 rounded transition" style="color: #EEEEEE;">Career</a>
-          <a href="#page4" class="px-4 py-2 rounded transition" style="color: #EEEEEE;">Projects</a>
-          <a href="#page5" class="px-4 py-2 rounded transition" style="color: #EEEEEE;">Contact</a>
+          <a href="#page1" class="px-4 py-2 rounded transition" style="color: var(--text);">Home</a>
+          <a href="#page2" class="px-4 py-2 rounded transition" style="color: var(--text);">Skills</a>
+          <a href="#page3" class="px-4 py-2 rounded transition" style="color: var(--text);">Career</a>
+          <a href="#page4" class="px-4 py-2 rounded transition" style="color: var(--text);">Projects</a>
+          <a href="#page5" class="px-4 py-2 rounded transition" style="color: var(--text);">Contact</a>
         </div>
 
-        <button id="mobileMenuBtn" class="md:hidden p-2">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+        <div class="flex items-center space-x-4">
+          <button id="themeToggleBtn" class="p-2 text-2xl transition hover:opacity-70">🌙</button>
+          <button id="mobileMenuBtn" class="md:hidden p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <div id="mobileMenu" class="hidden md:hidden border-t" style="background-color: #101010; border-color: #393E46;">
+      <div id="mobileMenu" class="hidden md:hidden border-t" style="background-color: var(--dark-bg); border-color: var(--card);">
         <div class="max-w-6xl mx-auto px-6 py-4 space-y-2">
-          <a href="#page1" class="block px-4 py-3 rounded" style="color: #EEEEEE;">Home</a>
-          <a href="#page2" class="block px-4 py-3 rounded" style="color: #EEEEEE;">Skills</a>
-          <a href="#page3" class="block px-4 py-3 rounded" style="color: #EEEEEE;">Career</a>
-          <a href="#page4" class="block px-4 py-3 rounded" style="color: #EEEEEE;">Projects</a>
-          <a href="#page5" class="block px-4 py-3 rounded" style="color: #EEEEEE;">Contact</a>
+          <a href="#page1" class="block px-4 py-3 rounded" style="color: var(--text);">Home</a>
+          <a href="#page2" class="block px-4 py-3 rounded" style="color: var(--text);">Skills</a>
+          <a href="#page3" class="block px-4 py-3 rounded" style="color: var(--text);">Career</a>
+          <a href="#page4" class="block px-4 py-3 rounded" style="color: var(--text);">Projects</a>
+          <a href="#page5" class="block px-4 py-3 rounded" style="color: var(--text);">Contact</a>
         </div>
       </div>
     </nav>
 
     <!-- Page 1: Home -->
-    <section id="page1" class="min-h-screen flex items-center justify-center px-6 pt-32 pb-20" style="background-color: #222831;">
+    <section id="page1" class="min-h-screen flex items-center justify-center px-6 pt-32 pb-20" style="background-color: var(--dark-main);">
       <div class="max-w-6xl mx-auto w-full">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="space-y-8 reveal reveal-left">
             <div>
-              <h1 class="text-6xl md:text-7xl font-black mb-4" style="color: #00ADB5;">이선일</h1>
-              <p class="text-3xl md:text-4xl font-bold" style="color: #EEEEEE;">풀스택 개발자</p>
+              <h1 class="text-6xl md:text-7xl font-black mb-4" style="color: var(--cyan);">이선일</h1>
+              <p class="text-3xl md:text-4xl font-bold" style="color: var(--text);">풀스택 개발자</p>
             </div>
 
-            <div class="space-y-4 text-lg" style="color: #EEEEEE;">
+            <div class="space-y-4 text-lg" style="color: var(--text);">
               <p>(주)펨포에서 풀스택 개발을 하고 있습니다.</p>
               <p>최신 웹 기술을 활용하여 사용자 경험을 높이는 서비스를 만드는 것을 좋아합니다.</p>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4">
-              <a href="#page5" class="px-8 py-4 rounded-lg font-bold text-lg text-center" style="background-color: #00ADB5; color: #101010;">📞 연락하기</a>
-              <a href="#page2" class="px-8 py-4 rounded-lg font-bold text-lg text-center border-2" style="background-color: #393E46; color: #EEEEEE; border-color: #00ADB5;">🚀 기술 보기</a>
+              <a href="#page5" class="px-8 py-4 rounded-lg font-bold text-lg text-center" style="background-color: var(--cyan); color: var(--dark-bg);">📞 연락하기</a>
+              <a href="#page2" class="px-8 py-4 rounded-lg font-bold text-lg text-center border-2" style="background-color: var(--card); color: var(--text); border-color: var(--cyan);">🚀 기술 보기</a>
             </div>
           </div>
 
@@ -74,55 +77,55 @@
     </section>
 
     <!-- Page 2: Skills -->
-    <section id="page2" class="min-h-screen flex items-center justify-center px-6 py-20" style="background-color: #101010;">
+    <section id="page2" class="min-h-screen flex items-center justify-center px-6 py-20" style="background-color: var(--dark-bg);">
       <div class="max-w-6xl mx-auto w-full">
-        <h2 class="text-5xl md:text-6xl font-black mb-20 text-center reveal" style="color: #00ADB5;">기술 스택</h2>
+        <h2 class="text-5xl md:text-6xl font-black mb-20 text-center reveal" style="color: var(--cyan);">기술 스택</h2>
 
         <div class="grid md:grid-cols-2 gap-8">
-          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: #222831; border: 1px solid #393E46;">
-            <h3 class="text-2xl font-bold mb-4" style="color: #00ADB5;">📄 HTML</h3>
-            <p class="mb-6" style="color: #EEEEEE;">시맨틱한 마크업으로 접근성 높은 웹</p>
-            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: #393E46;">
+          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: var(--dark-main); border: 1px solid var(--card);">
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--cyan);">📄 HTML</h3>
+            <p class="mb-6" style="color: var(--text);">시맨틱한 마크업으로 접근성 높은 웹</p>
+            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: var(--card);">
               <div class="h-full progress-bar" style="width: 90%;"></div>
             </div>
           </div>
 
-          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: #222831; border: 1px solid #393E46;">
-            <h3 class="text-2xl font-bold mb-4" style="color: #00ADB5;">🎨 Tailwind CSS</h3>
-            <p class="mb-6" style="color: #EEEEEE;">유틸리티 중심의 빠른 스타일링</p>
-            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: #393E46;">
+          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: var(--dark-main); border: 1px solid var(--card);">
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--cyan);">🎨 Tailwind CSS</h3>
+            <p class="mb-6" style="color: var(--text);">유틸리티 중심의 빠른 스타일링</p>
+            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: var(--card);">
               <div class="h-full progress-bar" style="width: 85%;"></div>
             </div>
           </div>
 
-          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: #222831; border: 1px solid #393E46;">
-            <h3 class="text-2xl font-bold mb-4" style="color: #00ADB5;">⚙️ JavaScript</h3>
-            <p class="mb-6" style="color: #EEEEEE;">인터랙티브한 기능 개발</p>
-            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: #393E46;">
+          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: var(--dark-main); border: 1px solid var(--card);">
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--cyan);">⚙️ JavaScript</h3>
+            <p class="mb-6" style="color: var(--text);">인터랙티브한 기능 개발</p>
+            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: var(--card);">
               <div class="h-full progress-bar" style="width: 85%;"></div>
             </div>
           </div>
 
-          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: #222831; border: 1px solid #393E46;">
-            <h3 class="text-2xl font-bold mb-4" style="color: #00ADB5;">⚛️ React</h3>
-            <p class="mb-6" style="color: #EEEEEE;">모던 프론트엔드 라이브러리</p>
-            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: #393E46;">
+          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: var(--dark-main); border: 1px solid var(--card);">
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--cyan);">⚛️ React</h3>
+            <p class="mb-6" style="color: var(--text);">모던 프론트엔드 라이브러리</p>
+            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: var(--card);">
               <div class="h-full progress-bar" style="width: 80%;"></div>
             </div>
           </div>
 
-          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: #222831; border: 1px solid #393E46;">
-            <h3 class="text-2xl font-bold mb-4" style="color: #00ADB5;">🟢 Node.js</h3>
-            <p class="mb-6" style="color: #EEEEEE;">백엔드 서버 개발</p>
-            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: #393E46;">
+          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: var(--dark-main); border: 1px solid var(--card);">
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--cyan);">🟢 Node.js</h3>
+            <p class="mb-6" style="color: var(--text);">백엔드 서버 개발</p>
+            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: var(--card);">
               <div class="h-full progress-bar" style="width: 75%;"></div>
             </div>
           </div>
 
-          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: #222831; border: 1px solid #393E46;">
-            <h3 class="text-2xl font-bold mb-4" style="color: #00ADB5;">📘 TypeScript</h3>
-            <p class="mb-6" style="color: #EEEEEE;">타입 안전성 있는 개발</p>
-            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: #393E46;">
+          <div class="rounded-2xl p-8 skill-card reveal" style="background-color: var(--dark-main); border: 1px solid var(--card);">
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--cyan);">📘 TypeScript</h3>
+            <p class="mb-6" style="color: var(--text);">타입 안전성 있는 개발</p>
+            <div class="w-full h-4 rounded-full overflow-hidden" style="background-color: var(--card);">
               <div class="h-full progress-bar" style="width: 70%;"></div>
             </div>
           </div>
@@ -131,43 +134,43 @@
     </section>
 
     <!-- Page 3: Career -->
-    <section id="page3" class="min-h-screen flex items-center justify-center px-6 py-20" style="background-color: #222831;">
+    <section id="page3" class="min-h-screen flex items-center justify-center px-6 py-20" style="background-color: var(--dark-main);">
       <div class="max-w-6xl mx-auto w-full">
-        <h2 class="text-5xl md:text-6xl font-black mb-20 text-center reveal" style="color: #C84B31;">경력</h2>
+        <h2 class="text-5xl md:text-6xl font-black mb-20 text-center reveal" style="color: var(--orange);">경력</h2>
 
         <div class="space-y-8">
-          <div class="rounded-2xl p-8 relative career-card reveal reveal-left" style="background-color: #393E46; border: 2px solid #00ADB5;">
-            <div class="absolute -top-4 -left-4 px-4 py-2 rounded text-sm font-bold" style="background-color: #00ADB5; color: #101010; transform: rotate(-10deg);">현재</div>
-            <h3 class="text-3xl font-bold mb-2" style="color: #00ADB5;">(주)펨포</h3>
-            <p class="text-xl font-semibold mb-2" style="color: #EEEEEE;">풀스택 개발자</p>
-            <p class="mb-4" style="color: #EEEEEE;">2023.01 ~ 현재</p>
-            <p style="color: #EEEEEE;">프론트엔드와 백엔드를 모두 다루며 사용자 경험을 최우선으로 하는 서비스 개발</p>
+          <div class="rounded-2xl p-8 relative career-card reveal reveal-left" style="background-color: var(--card); border: 2px solid var(--cyan);">
+            <div class="absolute -top-4 -left-4 px-4 py-2 rounded text-sm font-bold" style="background-color: var(--cyan); color: var(--dark-bg); transform: rotate(-10deg);">현재</div>
+            <h3 class="text-3xl font-bold mb-2" style="color: var(--cyan);">(주)펨포</h3>
+            <p class="text-xl font-semibold mb-2" style="color: var(--text);">풀스택 개발자</p>
+            <p class="mb-4" style="color: var(--text);">2023.01 ~ 현재</p>
+            <p style="color: var(--text);">프론트엔드와 백엔드를 모두 다루며 사용자 경험을 최우선으로 하는 서비스 개발</p>
           </div>
 
-          <div class="rounded-2xl p-8 career-card reveal reveal-right" style="background-color: #393E46; border: 1px solid #393E46;">
-            <h3 class="text-3xl font-bold mb-2" style="color: #00ADB5;">한양대학교</h3>
-            <p class="text-xl font-semibold mb-2" style="color: #EEEEEE;">소프트웨어공학과 졸업</p>
-            <p style="color: #EEEEEE;">컴퓨터 과학의 기초부터 최신 소프트웨어 개발 패러다임까지 학습</p>
+          <div class="rounded-2xl p-8 career-card reveal reveal-right" style="background-color: var(--card); border: 1px solid var(--card);">
+            <h3 class="text-3xl font-bold mb-2" style="color: var(--cyan);">한양대학교</h3>
+            <p class="text-xl font-semibold mb-2" style="color: var(--text);">소프트웨어공학과 졸업</p>
+            <p style="color: var(--text);">컴퓨터 과학의 기초부터 최신 소프트웨어 개발 패러다임까지 학습</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Page 4: Projects -->
-    <section id="page4" class="min-h-screen flex items-center justify-center px-6 py-20" style="background-color: #101010;">
+    <section id="page4" class="min-h-screen flex items-center justify-center px-6 py-20" style="background-color: var(--dark-bg);">
       <div class="max-w-6xl mx-auto w-full">
-        <h2 class="text-5xl md:text-6xl font-black mb-20 text-center reveal" style="color: #00FF94;">프로젝트</h2>
+        <h2 class="text-5xl md:text-6xl font-black mb-20 text-center reveal" style="color: var(--lime);">프로젝트</h2>
 
         <div class="space-y-16">
           <!-- Project 1 -->
           <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="rounded-2xl p-8 relative project-card reveal reveal-left" style="background-color: #222831; border: 1px solid #393E46;">
-              <div class="absolute -top-4 -left-4 px-4 py-2 rounded text-sm font-bold" style="background-color: #00FF94; color: #101010; transform: rotate(-10deg);">React</div>
-              <h3 class="text-3xl font-bold mb-3" style="color: #00ADB5;">포트폴리오 웹사이트</h3>
-              <p class="mb-4" style="color: #EEEEEE;">React와 Tailwind CSS로 만든 개인 포트폴리오 웹사이트입니다. 반응형 디자인과 다크모드를 지원합니다.</p>
+            <div class="rounded-2xl p-8 relative project-card reveal reveal-left" style="background-color: var(--dark-main); border: 1px solid var(--card);">
+              <div class="absolute -top-4 -left-4 px-4 py-2 rounded text-sm font-bold" style="background-color: var(--lime); color: var(--dark-bg); transform: rotate(-10deg);">React</div>
+              <h3 class="text-3xl font-bold mb-3" style="color: var(--cyan);">포트폴리오 웹사이트</h3>
+              <p class="mb-4" style="color: var(--text);">React와 Tailwind CSS로 만든 개인 포트폴리오 웹사이트입니다. 반응형 디자인과 다크모드를 지원합니다.</p>
               <div class="flex gap-3 flex-wrap">
-                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: #393E46; color: #00ADB5;">React</span>
-                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: #393E46; color: #00ADB5;">Tailwind</span>
+                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: var(--card); color: var(--cyan);">React</span>
+                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: var(--card); color: var(--cyan);">Tailwind</span>
               </div>
             </div>
             <div class="text-center text-8xl reveal reveal-right">🌐</div>
@@ -176,26 +179,26 @@
           <!-- Project 2 -->
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div class="text-center text-8xl order-2 md:order-1 reveal reveal-left">⚙️</div>
-            <div class="rounded-2xl p-8 relative order-1 md:order-2 project-card reveal reveal-right" style="background-color: #222831; border: 1px solid #393E46;">
-              <div class="absolute -top-4 -left-4 px-4 py-2 rounded text-sm font-bold" style="background-color: #C84B31; color: #EEEEEE; transform: rotate(-10deg);">Node.js</div>
-              <h3 class="text-3xl font-bold mb-3" style="color: #00ADB5;">백엔드 API 서버</h3>
-              <p class="mb-4" style="color: #EEEEEE;">Node.js와 Express로 구축한 RESTful API 서버입니다. 사용자 인증, 데이터베이스 연동을 구현했습니다.</p>
+            <div class="rounded-2xl p-8 relative order-1 md:order-2 project-card reveal reveal-right" style="background-color: var(--dark-main); border: 1px solid var(--card);">
+              <div class="absolute -top-4 -left-4 px-4 py-2 rounded text-sm font-bold" style="background-color: var(--orange); color: var(--text); transform: rotate(-10deg);">Node.js</div>
+              <h3 class="text-3xl font-bold mb-3" style="color: var(--cyan);">백엔드 API 서버</h3>
+              <p class="mb-4" style="color: var(--text);">Node.js와 Express로 구축한 RESTful API 서버입니다. 사용자 인증, 데이터베이스 연동을 구현했습니다.</p>
               <div class="flex gap-3 flex-wrap">
-                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: #393E46; color: #00ADB5;">Node.js</span>
-                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: #393E46; color: #00ADB5;">Express</span>
+                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: var(--card); color: var(--cyan);">Node.js</span>
+                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: var(--card); color: var(--cyan);">Express</span>
               </div>
             </div>
           </div>
 
           <!-- Project 3 -->
           <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="rounded-2xl p-8 relative project-card reveal reveal-left" style="background-color: #222831; border: 1px solid #393E46;">
-              <div class="absolute -top-4 -left-4 px-4 py-2 rounded text-sm font-bold" style="background-color: #001AFF; color: #EEEEEE; transform: rotate(-10deg);">TypeScript</div>
-              <h3 class="text-3xl font-bold mb-3" style="color: #00ADB5;">타입안전 애플리케이션</h3>
-              <p class="mb-4" style="color: #EEEEEE;">TypeScript를 활용하여 타입 안전성을 보장하는 확장성 높은 애플리케이션을 개발했습니다.</p>
+            <div class="rounded-2xl p-8 relative project-card reveal reveal-left" style="background-color: var(--dark-main); border: 1px solid var(--card);">
+              <div class="absolute -top-4 -left-4 px-4 py-2 rounded text-sm font-bold" style="background-color: var(--blue); color: var(--text); transform: rotate(-10deg);">TypeScript</div>
+              <h3 class="text-3xl font-bold mb-3" style="color: var(--cyan);">타입안전 애플리케이션</h3>
+              <p class="mb-4" style="color: var(--text);">TypeScript를 활용하여 타입 안전성을 보장하는 확장성 높은 애플리케이션을 개발했습니다.</p>
               <div class="flex gap-3 flex-wrap">
-                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: #393E46; color: #00ADB5;">TypeScript</span>
-                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: #393E46; color: #00ADB5;">React</span>
+                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: var(--card); color: var(--cyan);">TypeScript</span>
+                <span class="px-3 py-1 rounded text-sm font-semibold" style="background-color: var(--card); color: var(--cyan);">React</span>
               </div>
             </div>
             <div class="text-center text-8xl reveal reveal-right">📘</div>
@@ -205,36 +208,36 @@
     </section>
 
     <!-- Page 5: Contact -->
-    <section id="page5" class="min-h-screen flex items-center justify-center px-6 py-20" style="background-color: #101010;">
+    <section id="page5" class="min-h-screen flex items-center justify-center px-6 py-20" style="background-color: var(--dark-bg);">
       <div class="max-w-2xl mx-auto w-full text-center">
-        <h2 class="text-5xl md:text-6xl font-black mb-8 reveal" style="color: #00ADB5;">연락처</h2>
-        <p class="text-xl mb-12 reveal" style="color: #EEEEEE;">함께 일하고 싶으신가요? 언제든지 편하게 연락 주세요!</p>
+        <h2 class="text-5xl md:text-6xl font-black mb-8 reveal" style="color: var(--cyan);">연락처</h2>
+        <p class="text-xl mb-12 reveal" style="color: var(--text);">함께 일하고 싶으신가요? 언제든지 편하게 연락 주세요!</p>
 
         <div class="space-y-6">
-          <a href="tel:01056201046" class="block rounded-2xl p-10 reveal" style="background-color: #222831; border: 2px solid #00ADB5;">
+          <a href="tel:01056201046" class="block rounded-2xl p-10 reveal" style="background-color: var(--dark-main); border: 2px solid var(--cyan);">
             <div class="text-6xl mb-4">📞</div>
-            <h3 class="text-3xl font-bold mb-2" style="color: #00ADB5;">010-5620-1046</h3>
-            <p style="color: #EEEEEE;">전화로 연락하기</p>
+            <h3 class="text-3xl font-bold mb-2" style="color: var(--cyan);">010-5620-1046</h3>
+            <p style="color: var(--text);">전화로 연락하기</p>
           </a>
 
-          <a href="mailto:your-email@example.com" class="block rounded-2xl p-10 reveal" style="background-color: #222831; border: 2px solid #C84B31;">
+          <a href="mailto:your-email@example.com" class="block rounded-2xl p-10 reveal" style="background-color: var(--dark-main); border: 2px solid var(--orange);">
             <div class="text-6xl mb-4">✉️</div>
-            <h3 class="text-3xl font-bold mb-2" style="color: #C84B31;">이메일 보내기</h3>
-            <p style="color: #EEEEEE;">your-email@example.com</p>
+            <h3 class="text-3xl font-bold mb-2" style="color: var(--orange);">이메일 보내기</h3>
+            <p style="color: var(--text);">your-email@example.com</p>
           </a>
 
-          <div class="rounded-2xl p-8 mt-10 reveal" style="background-color: #393E46;">
-            <p class="text-lg font-semibold mb-2" style="color: #00FF94;">🚀 새로운 기회를 찾고 있습니다!</p>
-            <p style="color: #EEEEEE;">혁신적인 프로젝트와 도전적인 문제 해결에 항상 열려있습니다.</p>
+          <div class="rounded-2xl p-8 mt-10 reveal" style="background-color: var(--card);">
+            <p class="text-lg font-semibold mb-2" style="color: var(--lime);">🚀 새로운 기회를 찾고 있습니다!</p>
+            <p style="color: var(--text);">혁신적인 프로젝트와 도전적인 문제 해결에 항상 열려있습니다.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-6 text-center border-t" style="background-color: #101010; border-color: #393E46;">
-      <p class="mb-2" style="color: #EEEEEE;">© <span id="year">2024</span> 이선일 | 풀스택 개발자</p>
-      <p style="color: #C84B31;">Made with HTML, Tailwind CSS & JavaScript ❤️</p>
+    <footer class="py-8 px-6 text-center border-t" style="background-color: var(--dark-bg); border-color: var(--card);">
+      <p class="mb-2" style="color: var(--text);">© <span id="year">2024</span> 이선일 | 풀스택 개발자</p>
+      <p style="color: var(--orange);">Made with HTML, Tailwind CSS & JavaScript ❤️</p>
     </footer>
 
     <script type="module" src="/src/main.js"></script>

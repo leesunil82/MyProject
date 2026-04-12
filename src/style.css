@@ -19,6 +19,17 @@
   --text: #EEEEEE;
 }
 
+html.light {
+  --dark-main: #F5F5F5;
+  --dark-bg: #FFFFFF;
+  --card: #E8E8E8;
+  --cyan: #00ADB5;
+  --orange: #C84B31;
+  --lime: #00FF94;
+  --blue: #001AFF;
+  --text: #101010;
+}
+
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
@@ -49,7 +60,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #222831;
+  background-color: var(--dark-main);
 }
 
 ::-webkit-scrollbar-thumb {

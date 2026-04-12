@@ -114,8 +114,45 @@ function updateYear() {
   }
 }
 
+// Theme Toggler
+class ThemeToggler {
+  constructor() {
+    this.themeToggleBtn = document.getElementById('themeToggleBtn');
+    this.init();
+  }
+
+  init() {
+    // localStorage에서 저장된 테마 로드, 없으면 'dark' 기본값
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    this.applyTheme(savedTheme);
+
+    this.themeToggleBtn.addEventListener('click', () => this.toggle());
+  }
+
+  toggle() {
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    this.applyTheme(newTheme);
+  }
+
+  applyTheme(theme) {
+    const htmlElement = document.documentElement;
+
+    if (theme === 'dark') {
+      htmlElement.classList.remove('light');
+      this.themeToggleBtn.textContent = '☀️';
+    } else {
+      htmlElement.classList.add('light');
+      this.themeToggleBtn.textContent = '🌙';
+    }
+
+    localStorage.setItem('theme', theme);
+  }
+}
+
 // Initialize everything on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
+  new ThemeToggler();
   new ScrollProgressBar();
   new ScrollReveal();
   new ParallaxHandler();
