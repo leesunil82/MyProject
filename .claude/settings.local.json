@@ -3,7 +3,11 @@
     "allow": [
       "Bash(npm install:*)",
       "WebFetch(domain:leejeongmin.vercel.app)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(grep -E \"\\\\.\\(md|txt\\)$\")",
+      "Bash(vercel --prod)",
+      "Bash(python3:*)",
+      "Bash(vercel deploy:*)"
     ]
   }
 }
